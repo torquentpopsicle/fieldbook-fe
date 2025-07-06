@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 159 84% 39%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 159 84% 39%;
+
+    --radius: 0.75rem;
+
+    /* Sports-themed brand colors - Green palette */
+    --sport-50: 138 100% 96%;
+    --sport-100: 141 84% 93%;
+    --sport-200: 141 79% 85%;
+    --sport-300: 142 77% 73%;
+    --sport-400: 142 69% 58%;
+    --sport-500: 159 84% 39%;
+    --sport-600: 158 64% 52%;
+    --sport-700: 158 64% 42%;
+    --sport-800: 159 61% 35%;
+    --sport-900: 159 61% 29%;
+
+    /* Orange accent colors */
+    --orange-50: 33 100% 96%;
+    --orange-100: 34 100% 92%;
+    --orange-200: 32 98% 83%;
+    --orange-300: 31 97% 72%;
+    --orange-400: 27 96% 61%;
+    --orange-500: 25 95% 53%;
+    --orange-600: 21 90% 48%;
+    --orange-700: 17 88% 40%;
+    --orange-800: 15 79% 34%;
+    --orange-900: 15 75% 28%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 159 84% 39%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 159 84% 39%;
+
+    /* Dark mode adjustments for brand colors */
+    --sport-500: 159 84% 45%;
+    --sport-600: 158 64% 58%;
+    --orange-500: 25 95% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer components {
+  .gradient-bg {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--sport-500)) 0%,
+      hsl(var(--sport-600)) 100%
+    );
+  }
+
+  .gradient-text {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--sport-500)) 0%,
+      hsl(var(--sport-700)) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
