@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import FieldCard from "@/components/field-card";
@@ -15,116 +15,49 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Slider } from "@/components/ui/slider";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Search, Filter, MapPin, SlidersHorizontal } from "lucide-react";
+import {
+  Search,
+  Filter,
+  MapPin,
+  SlidersHorizontal,
+  Loader2,
+} from "lucide-react";
+import { apiGet, API_ENDPOINTS } from "@/lib/api";
 
 const BrowseFields = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [sportType, setSportType] = useState("");
   const [priceRange, setPriceRange] = useState([0, 200]);
   const [sortBy, setSortBy] = useState("recommended");
+  const [allFields, setAllFields] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
 
-  // Mock data for fields
-  const allFields = [
-    {
-      id: "1",
-      name: "Elite Soccer Complex",
-      location: "Downtown Sports Center",
-      image:
-        "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=400&h=300&fit=crop",
-      price: 75,
-      rating: 4.8,
-      reviews: 124,
-      capacity: 22,
-      sportType: "Soccer",
-      availability: "Available today",
-      features: [
-        "Floodlights",
-        "Parking",
-        "Changing Rooms",
-        "Equipment Rental",
-      ],
-    },
-    {
-      id: "2",
-      name: "Premium Basketball Court",
-      location: "City Sports Hub",
-      image:
-        "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=400&h=300&fit=crop",
-      price: 45,
-      rating: 4.9,
-      reviews: 89,
-      capacity: 10,
-      sportType: "Basketball",
-      availability: "Available now",
-      features: ["Indoor", "Air Conditioning", "Sound System", "Scoreboard"],
-    },
-    {
-      id: "3",
-      name: "Tennis Club Professional",
-      location: "Riverside Tennis Center",
-      image:
-        "https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?w=400&h=300&fit=crop",
-      price: 60,
-      rating: 4.7,
-      reviews: 156,
-      capacity: 4,
-      sportType: "Tennis",
-      availability: "Available tomorrow",
-      features: [
-        "Clay Court",
-        "Professional Lighting",
-        "Pro Shop",
-        "Coaching Available",
-      ],
-    },
-    {
-      id: "4",
-      name: "Multi-Sport Arena",
-      location: "Westside Recreation",
-      image:
-        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
-      price: 55,
-      rating: 4.6,
-      reviews: 203,
-      capacity: 20,
-      sportType: "Volleyball",
-      availability: "Available today",
-      features: ["Indoor", "Multiple Courts", "Parking", "Cafe"],
-    },
-    {
-      id: "5",
-      name: "Futsal Pro Arena",
-      location: "North Sports Complex",
-      image:
-        "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=400&h=300&fit=crop",
-      price: 65,
-      rating: 4.5,
-      reviews: 78,
-      capacity: 12,
-      sportType: "Futsal",
-      availability: "Available today",
-      features: ["Indoor", "Professional Surface", "Sound System", "Lighting"],
-    },
-    {
-      id: "6",
-      name: "Badminton Excellence",
-      location: "East Community Center",
-      image:
-        "https://images.unsplash.com/photo-1594736797933-d0a9ba4b7d8b?w=400&h=300&fit=crop",
-      price: 35,
-      rating: 4.4,
-      reviews: 92,
-      capacity: 4,
-      sportType: "Badminton",
-      availability: "Available now",
-      features: [
-        "Indoor",
-        "Multiple Courts",
-        "Equipment Rental",
-        "Air Conditioning",
-      ],
-    },
-  ];
+  // Fetch fields data from API
+  useEffect(() => {
+    const fetchFields = async () => {
+      try {
+        setLoading(true);
+        setError("");
+
+        const response = await apiGet(API_ENDPOINTS.FIELDS);
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        setAllFields(data.data || data || []);
+      } catch (err) {
+        console.error("Error fetching fields:", err);
+        setError("Failed to load fields. Please try again later.");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchFields();
+  }, []);
 
   const sportTypes = [
     "Soccer",
@@ -314,7 +247,9 @@ const BrowseFields = () => {
             <div className="lg:col-span-3">
               <div className="flex items-center justify-between mb-6">
                 <p className="text-muted-foreground">
-                  Showing {allFields.length} results
+                  {loading
+                    ? "Loading..."
+                    : `Showing ${allFields.length} results`}
                 </p>
                 <Button variant="outline" size="sm" className="lg:hidden">
                   <Filter className="mr-2 h-4 w-4" />
@@ -322,18 +257,44 @@ const BrowseFields = () => {
                 </Button>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-                {allFields.map((field) => (
-                  <FieldCard key={field.id} {...field} />
-                ))}
-              </div>
+              {loading ? (
+                <div className="flex items-center justify-center py-12">
+                  <div className="flex items-center space-x-2">
+                    <Loader2 className="h-6 w-6 animate-spin" />
+                    <span>Loading fields...</span>
+                  </div>
+                </div>
+              ) : error ? (
+                <div className="flex items-center justify-center py-12">
+                  <div className="text-center">
+                    <p className="text-muted-foreground mb-4">{error}</p>
+                    <Button onClick={() => window.location.reload()}>
+                      Try Again
+                    </Button>
+                  </div>
+                </div>
+              ) : allFields.length === 0 ? (
+                <div className="flex items-center justify-center py-12">
+                  <div className="text-center">
+                    <p className="text-muted-foreground">No fields found.</p>
+                  </div>
+                </div>
+              ) : (
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                  {allFields.map((field) => (
+                    <FieldCard key={field.id} {...field} />
+                  ))}
+                </div>
+              )}
 
               {/* Load More */}
-              <div className="text-center mt-12">
-                <Button variant="outline" size="lg">
-                  Load More Fields
-                </Button>
-              </div>
+              {!loading && !error && allFields.length > 0 && (
+                <div className="text-center mt-12">
+                  <Button variant="outline" size="lg">
+                    Load More Fields
+                  </Button>
+                </div>
+              )}
             </div>
           </div>
         </div>

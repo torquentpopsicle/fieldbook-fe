@@ -6,14 +6,14 @@ import { MapPin, Star, Users, Clock } from "lucide-react";
 interface FieldCardProps {
   id: number;
   name: string;
-  address: string;
-  images: string;
-  price_per_hour: number;
-  rating: number;
-  reviews_count: number;
-  capacity: number;
-  sport_type: string;
-  availability_summary: string;
+  address?: string;
+  images?: string;
+  price_per_hour?: number;
+  rating?: number;
+  reviews_count?: number;
+  capacity?: number;
+  sport_type?: string;
+  availability_summary?: string;
   facilities?: string[];
   currency?: string;
   description?: string;
@@ -36,16 +36,19 @@ const FieldCard = ({
     <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300 group">
       <div className="relative">
         <img
-          src={images}
+          src={
+            images ||
+            "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop"
+          }
           alt={name}
           className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
         />
         <Badge className="absolute top-3 left-3 bg-sport-500 hover:bg-sport-600">
-          {sport_type}
+          {sport_type || "Sport"}
         </Badge>
         <div className="absolute top-3 right-3 bg-black/50 backdrop-blur-sm rounded-full px-2 py-1 flex items-center space-x-1">
           <Star className="h-3 w-3 fill-yellow-400 text-yellow-400" />
-          <span className="text-white text-xs font-medium">{rating}</span>
+          <span className="text-white text-xs font-medium">{rating || 0}</span>
         </div>
       </div>
 
@@ -54,17 +57,17 @@ const FieldCard = ({
 
         <div className="flex items-center text-muted-foreground text-sm mb-2">
           <MapPin className="h-4 w-4 mr-1" />
-          {address}
+          {address || "Location not specified"}
         </div>
 
         <div className="flex items-center justify-between text-sm text-muted-foreground mb-3">
           <div className="flex items-center">
             <Users className="h-4 w-4 mr-1" />
-            Up to {capacity} players
+            Up to {capacity || 0} players
           </div>
           <div className="flex items-center">
             <Clock className="h-4 w-4 mr-1" />
-            {availability_summary}
+            {availability_summary || "Check availability"}
           </div>
         </div>
 
@@ -86,12 +89,15 @@ const FieldCard = ({
         <div className="flex items-center justify-between">
           <div>
             <span className="text-2xl font-bold text-sport-600">
-              {currency} {price_per_hour.toLocaleString()}
+              {currency}
+              {price_per_hour
+                ? `${Number(price_per_hour).toLocaleString("id-ID").replace(/,/g, ".")}`
+                : "0"}
             </span>
             <span className="text-sm text-muted-foreground">/hour</span>
           </div>
           <div className="text-xs text-muted-foreground">
-            {reviews_count} reviews
+            {reviews_count || 0} reviews
           </div>
         </div>
       </CardContent>

@@ -199,9 +199,11 @@ const CustomerDashboard = () => {
                       className="w-16 h-16 rounded-lg object-cover"
                     />
                     <div className="flex-1 space-y-1">
-                      <div className="flex items-center justify-between">
+                      <div className="flex items-center justify-start">
                         <h4 className="font-medium">{booking.field}</h4>
-                        <Badge className={getStatusColor(booking.status)}>
+                        <Badge
+                          className={`${getStatusColor(booking.status)} ml-3`}
+                        >
                           {booking.status}
                         </Badge>
                       </div>
