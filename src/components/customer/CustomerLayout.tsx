@@ -39,9 +39,9 @@ const CustomerLayout = ({ children }: CustomerLayoutProps) => {
     { name: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
     { name: "Book Field", href: "/dashboard/book", icon: Search },
     { name: "My Bookings", href: "/dashboard/bookings", icon: Calendar },
-    { name: "Favorites", href: "/dashboard/favorites", icon: Heart },
-    { name: "Profile", href: "/dashboard/profile", icon: User },
-    { name: "Billing", href: "/dashboard/billing", icon: CreditCard },
+    // { name: "Favorites", href: "/dashboard/favorites", icon: Heart },
+    // { name: "Profile", href: "/dashboard/profile", icon: User },
+    // { name: "Billing", href: "/dashboard/billing", icon: CreditCard },
   ];
 
   const handleLogout = () => {
@@ -53,7 +53,12 @@ const CustomerLayout = ({ children }: CustomerLayoutProps) => {
     if (path === "/dashboard") {
       return location.pathname === "/dashboard";
     }
-    return location.pathname.startsWith(path);
+    return (
+      location.pathname === path ||
+      (location.pathname.startsWith(path) &&
+        (location.pathname.length === path.length ||
+          location.pathname[path.length] === "/"))
+    );
   };
 
   const SidebarContent = () => (
@@ -141,9 +146,9 @@ const CustomerLayout = ({ children }: CustomerLayoutProps) => {
           </div>
 
           <div className="flex items-center space-x-4">
-            <Button variant="ghost" size="icon">
-              <Bell className="h-4 w-4" />
-            </Button>
+            <div className="text-sm font-medium text-foreground">
+              {user?.name}
+            </div>
 
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
@@ -169,7 +174,7 @@ const CustomerLayout = ({ children }: CustomerLayoutProps) => {
                   </div>
                 </DropdownMenuLabel>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem
+                {/* <DropdownMenuItem
                   onClick={() => navigate("/dashboard/profile")}
                 >
                   <User className="mr-2 h-4 w-4" />
@@ -180,7 +185,7 @@ const CustomerLayout = ({ children }: CustomerLayoutProps) => {
                 >
                   <CreditCard className="mr-2 h-4 w-4" />
                   <span>Billing</span>
-                </DropdownMenuItem>
+                </DropdownMenuItem> */}
                 <DropdownMenuItem onClick={handleLogout}>
                   <LogOut className="mr-2 h-4 w-4" />
                   <span>Log out</span>

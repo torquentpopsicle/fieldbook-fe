@@ -60,32 +60,39 @@ const CustomerDashboard = () => {
 
   const recommendedFields = [
     {
-      id: "1",
+      id: 1,
       name: "Premium Futsal Arena",
-      location: "North Sports Complex",
-      image:
+      address: "North Sports Complex",
+      images:
         "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=400&h=300&fit=crop",
-      price: 65,
+      price_per_hour: 65000,
       rating: 4.8,
-      reviews: 89,
+      reviews_count: 89,
       capacity: 12,
-      sportType: "Futsal",
-      availability: "Available today",
-      features: ["Indoor", "Professional Surface", "Sound System", "Lighting"],
+      sport_type: "Futsal",
+      availability_summary: "Available today",
+      facilities: [
+        "Indoor",
+        "Professional Surface",
+        "Sound System",
+        "Lighting",
+      ],
+      currency: "Rp",
     },
     {
-      id: "2",
+      id: 2,
       name: "Volleyball Pro Court",
-      location: "Westside Recreation",
-      image:
+      address: "Westside Recreation",
+      images:
         "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
-      price: 55,
+      price_per_hour: 55000,
       rating: 4.6,
-      reviews: 156,
+      reviews_count: 156,
       capacity: 12,
-      sportType: "Volleyball",
-      availability: "Available tomorrow",
-      features: ["Indoor", "Professional Net", "Parking", "Cafe"],
+      sport_type: "Volleyball",
+      availability_summary: "Available tomorrow",
+      facilities: ["Indoor", "Professional Net", "Parking", "Cafe"],
+      currency: "Rp",
     },
   ];
 

@@ -7,4 +7,5 @@ export const API_ENDPOINTS = {
   REGISTER: `${API_URL}/api/v1/auth/register`,
   LOGOUT: `${API_URL}/api/v1/auth/logout`,
   REFRESH: `${API_URL}/api/v1/auth/refresh`,
+  FIELDS: `${API_URL}/api/v1/fields`,
 } as const; 
