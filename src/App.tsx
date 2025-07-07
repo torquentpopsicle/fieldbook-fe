@@ -15,6 +15,9 @@ import AdminDashboard from "./pages/admin/AdminDashboard";
 import CustomerDashboard from "./pages/customer/CustomerDashboard";
 import BookField from "./pages/customer/BookField";
 import NotFound from "./pages/NotFound";
+import Fields from "./pages/admin/Fields";
+import Bookings from "./pages/admin/Bookings";
+import Customers from "./pages/admin/Customers";
 
 const queryClient = new QueryClient();
 
@@ -44,10 +47,26 @@ const App = () => (
                 }
               />
               <Route
-                path="/admin/*"
+                path="/admin/fields"
                 element={
                   <ProtectedRoute requiredRole="admin">
-                    <AdminDashboard />
+                    <Fields />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/admin/bookings"
+                element={
+                  <ProtectedRoute requiredRole="admin">
+                    <Bookings />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/admin/customers"
+                element={
+                  <ProtectedRoute requiredRole="admin">
+                    <Customers />
                   </ProtectedRoute>
                 }
               />

@@ -40,8 +40,6 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
     { name: "Fields", href: "/admin/fields", icon: Building2 },
     { name: "Bookings", href: "/admin/bookings", icon: Calendar },
     { name: "Customers", href: "/admin/customers", icon: Users },
-    { name: "Analytics", href: "/admin/analytics", icon: BarChart3 },
-    { name: "Settings", href: "/admin/settings", icon: Settings },
   ];
 
   const handleLogout = () => {
@@ -141,10 +139,9 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
           </div>
 
           <div className="flex items-center space-x-4">
-            <Button variant="ghost" size="icon">
-              <Bell className="h-4 w-4" />
-            </Button>
-
+            <div className="text-sm font-medium text-foreground">
+              {user?.name}
+            </div>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button
@@ -169,11 +166,11 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
                   </div>
                 </DropdownMenuLabel>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem onClick={() => navigate("/admin/settings")}>
-                  <Settings className="mr-2 h-4 w-4" />
-                  <span>Settings</span>
-                </DropdownMenuItem>
-                <DropdownMenuItem onClick={handleLogout}>
+
+                <DropdownMenuItem
+                  onClick={handleLogout}
+                  className="hover:cursor-pointer"
+                >
                   <LogOut className="mr-2 h-4 w-4" />
                   <span>Log out</span>
                 </DropdownMenuItem>
