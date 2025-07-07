@@ -26,7 +26,7 @@ const SignIn = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Redirect if already logged in
-  if (user) {
+  if (user && !loading) {
     return (
       <Navigate to={user.role === "admin" ? "/admin" : "/dashboard"} replace />
     );

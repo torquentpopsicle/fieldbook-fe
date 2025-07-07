@@ -6,6 +6,7 @@
     "dev": "vite",
     "build": "vite build",
     "test": "vitest --run",
+    "test:api": "node scripts/test-api.js",
     "format.fix": "prettier --write .",
     "typecheck": "tsc"
   },
