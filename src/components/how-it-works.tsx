@@ -70,11 +70,11 @@ const HowItWorks = () => {
         </div>
 
         {/* Connection Lines - Desktop Only */}
-        <div className="hidden md:block relative -mt-24 pt-24">
+        {/* <div className="hidden md:block relative -mt-24 pt-24">
           <div className="absolute top-20 left-1/6 right-1/6 h-0.5 bg-gradient-to-r from-sport-200 via-sport-300 to-sport-200"></div>
           <div className="absolute top-20 left-1/6 w-2 h-2 bg-sport-400 rounded-full transform -translate-x-1/2"></div>
           <div className="absolute top-20 right-1/6 w-2 h-2 bg-sport-400 rounded-full transform translate-x-1/2"></div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

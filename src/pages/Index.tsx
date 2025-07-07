@@ -141,7 +141,7 @@ const Index = () => {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-sport-600"
+                  className="border-white text-sport-600 hover:bg-white/90 hover:text-sport-600"
                 >
                   Learn More
                 </Button>

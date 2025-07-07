@@ -5,70 +5,74 @@ import { ChevronRight } from "lucide-react";
 const FeaturedFields = () => {
   const featuredFields = [
     {
-      id: "1",
+      id: 1,
       name: "Elite Soccer Complex",
-      location: "Downtown Sports Center",
-      image:
-        "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=400&h=300&fit=crop",
-      price: 75,
+      address: "Downtown Sports Center",
+      images:
+        "https://plus.unsplash.com/premium_photo-1684446464405-71867f88356b?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      price_per_hour: 75000,
       rating: 4.8,
-      reviews: 124,
+      reviews_count: 124,
       capacity: 22,
-      sportType: "Soccer",
-      availability: "Available today",
-      features: [
+      sport_type: "Soccer",
+      availability_summary: "Available today",
+      facilities: [
         "Floodlights",
         "Parking",
         "Changing Rooms",
         "Equipment Rental",
       ],
+      currency: "Rp",
     },
     {
-      id: "2",
+      id: 2,
       name: "Premium Basketball Court",
-      location: "City Sports Hub",
-      image:
+      address: "City Sports Hub",
+      images:
         "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=400&h=300&fit=crop",
-      price: 45,
+      price_per_hour: 45000,
       rating: 4.9,
-      reviews: 89,
+      reviews_count: 89,
       capacity: 10,
-      sportType: "Basketball",
-      availability: "Available now",
-      features: ["Indoor", "Air Conditioning", "Sound System", "Scoreboard"],
+      sport_type: "Basketball",
+      availability_summary: "Available now",
+      facilities: ["Indoor", "Air Conditioning", "Sound System", "Scoreboard"],
+      currency: "Rp",
     },
     {
-      id: "3",
+      id: 3,
       name: "Tennis Club Professional",
-      location: "Riverside Tennis Center",
-      image:
+      address: "Riverside Tennis Center",
+      images:
         "https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?w=400&h=300&fit=crop",
-      price: 60,
+      price_per_hour: 60000,
       rating: 4.7,
-      reviews: 156,
+      reviews_count: 156,
       capacity: 4,
-      sportType: "Tennis",
-      availability: "Available tomorrow",
-      features: [
+      sport_type: "Tennis",
+      availability_summary: "Available tomorrow",
+      facilities: [
         "Clay Court",
         "Professional Lighting",
         "Pro Shop",
         "Coaching Available",
       ],
+      currency: "Rp",
     },
     {
-      id: "4",
+      id: 4,
       name: "Multi-Sport Arena",
-      location: "Westside Recreation",
-      image:
+      address: "Westside Recreation",
+      images:
         "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
-      price: 55,
+      price_per_hour: 55000,
       rating: 4.6,
-      reviews: 203,
+      reviews_count: 203,
       capacity: 20,
-      sportType: "Volleyball",
-      availability: "Available today",
-      features: ["Indoor", "Multiple Courts", "Parking", "Cafe"],
+      sport_type: "Volleyball",
+      availability_summary: "Available today",
+      facilities: ["Indoor", "Multiple Courts", "Parking", "Cafe"],
+      currency: "Rp",
     },
   ];
 
