@@ -133,14 +133,14 @@ const Footer = () => {
               <li className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-slate-400 mt-0.5 flex-shrink-0" />
                 <span className="text-slate-300">
-                  123 Sports Avenue
+                  Jalan Pendrikan Kidul
                   <br />
-                  City, State 12345
+                  Kota Semarang, 50148
                 </span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-slate-400 flex-shrink-0" />
-                <span className="text-slate-300">+1 (555) 123-4567</span>
+                <span className="text-slate-300">+62 821-3778-3251</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-slate-400 flex-shrink-0" />

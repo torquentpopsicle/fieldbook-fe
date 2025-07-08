@@ -11,46 +11,34 @@ const Contact = () => {
   const contactMethods = [
     {
       icon: Mail,
-      title: "Email Us",
-      description: "Send us an email and we'll respond within 24 hours",
-      contact: "hello@fieldbook.com",
-      action: "Send Email",
+      title: "Email",
+      description: "Hubungi kita via emaail, customer tersedia 24 jam full.",
+      contact: "halo@arenakita.com",
+      action: "Kirim Email",
     },
     {
       icon: Phone,
-      title: "Call Us",
-      description: "Speak directly with our support team",
-      contact: "+1 (555) 123-4567",
-      action: "Call Now",
+      title: "Telepon",
+      description: "Layanan telepon juga tersedia",
+      contact: "+62 821-3778-3251",
+      action: "Telepon Sekarang",
     },
     {
       icon: MessageCircle,
       title: "Live Chat",
-      description: "Chat with us in real-time for immediate assistance",
-      contact: "Available 9AM - 6PM EST",
-      action: "Start Chat",
+      description: "Chat dengan admin secara langsung",
+      contact: "Tersedia pukul 08.00 - 22.00",
+      action: "Mulai Chat",
     },
   ];
 
   const offices = [
     {
-      city: "New York",
-      address: "123 Sports Avenue, NY 10001",
-      phone: "+1 (555) 123-4567",
-      email: "ny@fieldbook.com",
-    },
-    {
-      city: "Los Angeles",
-      address: "456 Athletic Blvd, LA 90210",
-      phone: "+1 (555) 987-6543",
-      email: "la@fieldbook.com",
-    },
-    {
-      city: "Chicago",
-      address: "789 Game Street, Chicago 60601",
-      phone: "+1 (555) 456-7890",
-      email: "chicago@fieldbook.com",
-    },
+      city: "Semarang",
+      address: "Jalan Pendrikan Kidul",
+      phone: "+62 821-3778-3251",
+      email: "halo@arenakita.com",
+    }
   ];
 
   return (
@@ -172,11 +160,10 @@ const Contact = () => {
           <div>
             <div className="text-center mb-12">
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-                Our Offices
+                Kantor ArenaKita
               </h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Visit us at one of our locations or reach out to your local
-                team.
+                Kunjungi kantor pusat kita.
               </p>
             </div>
 
