@@ -61,7 +61,7 @@ const HeroSection = () => {
               <div className="relative">
                 <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                 <Input
-                  placeholder="Masukkan Lokasimu..."
+                  placeholder="Masukkan Lokasi..."
                   value={location}
                   onChange={(e) => setLocation(e.target.value)}
                   className="pl-10 h-12"
@@ -71,7 +71,7 @@ const HeroSection = () => {
               {/* Sport Type */}
               <Select value={sportType} onValueChange={setSportType}>
                 <SelectTrigger className="h-12">
-                  <SelectValue placeholder="Tipe Olahragamu" />
+                  <SelectValue placeholder="Tipe Olahraga" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">All Sports</SelectItem>
