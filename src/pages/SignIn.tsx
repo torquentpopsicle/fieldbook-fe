@@ -89,7 +89,7 @@ const SignIn = () => {
               <CardHeader>
                 <CardTitle>Customer Sign In</CardTitle>
                 <CardDescription>
-                  Access your dashboard to book and manage field reservations
+                  Lihat dan Kelola Pesanan Lapanganmu
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -168,7 +168,7 @@ const SignIn = () => {
               <CardHeader>
                 <CardTitle>Admin Sign In</CardTitle>
                 <CardDescription>
-                  Access the admin dashboard to manage fields and bookings
+                  Kelola Lapangan dan Pesanan Pelanggan
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
