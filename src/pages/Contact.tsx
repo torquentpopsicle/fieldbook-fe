@@ -76,13 +76,13 @@ const Contact = () => {
                       <label className="text-sm font-medium mb-2 block">
                         Nama Awal
                       </label>
-                      <Input placeholder="Your first name" />
+                      <Input placeholder="Nama Awal Kamu" />
                     </div>
                     <div>
                       <label className="text-sm font-medium mb-2 block">
                         Nama Akhir
                       </label>
-                      <Input placeholder="Your last name" />
+                      <Input placeholder="Nama Akhir Kamu" />
                     </div>
                   </div>
 
@@ -97,7 +97,7 @@ const Contact = () => {
                     <label className="text-sm font-medium mb-2 block">
                       Subjek
                     </label>
-                    <Input placeholder="What's this about?" />
+                    <Input placeholder="Berisi tentang apa?" />
                   </div>
 
                   <div>
@@ -105,7 +105,7 @@ const Contact = () => {
                       Isi Pesan
                     </label>
                     <Textarea
-                      placeholder="Tell us more about your question or feedback..."
+                      placeholder="Beri tahu kami keluhan, saran, ataupun rating dari anda..."
                       className="min-h-32"
                     />
                   </div>
