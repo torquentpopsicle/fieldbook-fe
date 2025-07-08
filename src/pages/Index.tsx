@@ -116,35 +116,35 @@ const Index = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-16 lg:py-24 gradient-bg relative overflow-hidden">
-          <div className="absolute inset-0 bg-black/10"></div>
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Siap Bermain?
-              </h2>
-              <p className="text-xl text-white/90 mb-8">
-                Yuk, langsung booking lapangan favoritmu sekarang. Banyak atlet & komunitas sudah percaya ArenaKita!
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button
-                  size="lg"
-                  className="bg-white text-sport-600 hover:bg-white/90"
-                >
-                  Booking Sekarang
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-white text-white hover:bg-white/90 hover:text-sport-600"
-                >
-                  Learn More
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
+       {/* CTA Section */}
+<section className="py-16 lg:py-24 gradient-bg relative overflow-hidden">
+  <div className="absolute inset-0 bg-black/10"></div>
+  <div className="container mx-auto px-4 relative z-10">
+    <div className="max-w-3xl mx-auto text-center">
+      <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+        Siap Bermain?
+      </h2>
+      <p className="text-xl text-white/90 mb-8">
+        Yuk, langsung booking lapangan favoritmu sekarang. Banyak atlet & komunitas sudah percaya ArenaKita!
+      </p>
+      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button
+          size="lg"
+          className="bg-white text-sport-600 hover:bg-white/90"
+        >
+          Booking Sekarang
+        </Button>
+        <Button
+          size="lg"
+          variant="outline"
+          className="bg-transparent border border-white text-white hover:bg-white hover:text-sport-600 transition"
+        >
+          Pelajari Lebih Lanjut
+        </Button>
+      </div>
+    </div>
+  </div>
+</section>
       </main>
 
       <Footer />
