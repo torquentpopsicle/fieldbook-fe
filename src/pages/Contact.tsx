@@ -12,7 +12,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      description: "Hubungi kita via emaail, customer tersedia 24 jam full.",
+      description: "Hubungi kita via email, customer tersedia 24 jam full",
       contact: "halo@arenakita.com",
       action: "Kirim Email",
     },
@@ -50,14 +50,13 @@ const Contact = () => {
           {/* Hero Section */}
           <div className="text-center mb-16">
             <Badge className="mb-4 bg-sport-50 text-sport-700 hover:bg-sport-100">
-              Contact Us
+              Hubungi Kami
             </Badge>
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-              Get in Touch
+              Yuk, Hubungi ArenaKita
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Have questions? Need support? Want to partner with us? We'd love
-              to hear from you. Our team is here to help with whatever you need.
+              Punya keluhan? Saran? Ingin bekerja sama dengan kami? ArenaKita sangat terbuka dengan itu semua, isi formulir dibawah ini ya :D
             </p>
           </div>
 
@@ -68,20 +67,20 @@ const Contact = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center">
                     <Users className="mr-2 h-5 w-5" />
-                    Send us a Message
+                    Kirim Pesan untuk ArenaKita
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <label className="text-sm font-medium mb-2 block">
-                        First Name
+                        Nama Awal
                       </label>
                       <Input placeholder="Your first name" />
                     </div>
                     <div>
                       <label className="text-sm font-medium mb-2 block">
-                        Last Name
+                        Nama Akhir
                       </label>
                       <Input placeholder="Your last name" />
                     </div>
@@ -96,14 +95,14 @@ const Contact = () => {
 
                   <div>
                     <label className="text-sm font-medium mb-2 block">
-                      Subject
+                      Subjek
                     </label>
                     <Input placeholder="What's this about?" />
                   </div>
 
                   <div>
                     <label className="text-sm font-medium mb-2 block">
-                      Message
+                      Isi Pesan
                     </label>
                     <Textarea
                       placeholder="Tell us more about your question or feedback..."
@@ -112,7 +111,7 @@ const Contact = () => {
                   </div>
 
                   <Button className="w-full gradient-bg hover:opacity-90">
-                    Send Message
+                    Kirim Pesan
                   </Button>
                 </CardContent>
               </Card>
@@ -200,14 +199,13 @@ const Contact = () => {
           {/* FAQ Section */}
           <div className="mt-20 text-center">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Frequently Asked Questions
+              Pertanyaan yang Sering Diajukan
             </h2>
             <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-              Looking for quick answers? Check out our FAQ section for common
-              questions about booking, payments, and using FieldBook.
+              Cari jawaban cepat? Lihat bagian FAQ kami untuk pertanyaan umum seputar booking, pembayaran, dan penggunaan ArenaKita.
             </p>
             <Button variant="outline" size="lg">
-              View FAQ
+              Lihat FAQ
             </Button>
           </div>
         </div>
