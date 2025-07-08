@@ -24,8 +24,7 @@ const Footer = () => {
               <span className="font-bold text-xl">ArenaKita</span>
             </Link>
             <p className="text-slate-300 mb-6 leading-relaxed">
-              Your premier destination for booking sports facilities. Find,
-              book, and play at the best venues in your area.
+              Tempat booking andalanmu, termurah dan ternyaman. Satu lapangan, seribu kemenangan.
             </p>
             <div className="flex space-x-4">
               <a
