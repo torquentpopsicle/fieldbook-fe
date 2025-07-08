@@ -43,7 +43,7 @@ const Navigation = () => {
             <div className="h-8 w-8 rounded-lg gradient-bg flex items-center justify-center">
               <MapPin className="h-5 w-5 text-white" />
             </div>
-            <span className="font-bold text-xl gradient-text">FieldBook</span>
+            <span className="font-bold text-xl gradient-text">ArenaKita</span>
           </Link>
 
           {/* Desktop Navigation */}
