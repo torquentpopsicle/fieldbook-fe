@@ -24,6 +24,8 @@ import {
 } from "lucide-react";
 import { apiGet, API_ENDPOINTS } from "@/lib/api";
 
+// ...import tetap seperti aslinya
+
 const BrowseFields = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [sportType, setSportType] = useState("");
@@ -33,7 +35,6 @@ const BrowseFields = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  // Fetch fields data from API
   useEffect(() => {
     const fetchFields = async () => {
       try {
@@ -50,7 +51,7 @@ const BrowseFields = () => {
         setAllFields(data.data || data || []);
       } catch (err) {
         console.error("Error fetching fields:", err);
-        setError("Failed to load fields. Please try again later.");
+        setError("Gagal memuat data lapangan. Silakan coba lagi nanti.");
       } finally {
         setLoading(false);
       }
@@ -60,21 +61,21 @@ const BrowseFields = () => {
   }, []);
 
   const sportTypes = [
-    "Soccer",
-    "Basketball",
-    "Tennis",
-    "Volleyball",
+    "Sepak Bola",
+    "Basket",
+    "Tenis",
+    "Voli",
     "Futsal",
     "Badminton",
   ];
   const features = [
-    "Indoor",
-    "Outdoor",
-    "Parking",
-    "Changing Rooms",
-    "Equipment Rental",
-    "Floodlights",
-    "Air Conditioning",
+    "Dalam Ruangan",
+    "Luar Ruangan",
+    "Parkir",
+    "Ruang Ganti",
+    "Sewa Peralatan",
+    "Lampu Stadion",
+    "AC",
   ];
 
   return (
@@ -86,34 +87,33 @@ const BrowseFields = () => {
           {/* Header */}
           <div className="mb-8">
             <h1 className="text-3xl lg:text-4xl font-bold mb-4">
-              Browse Sports Fields
+              Telusuri Lapangan Olahraga
             </h1>
             <p className="text-muted-foreground text-lg">
-              Find the perfect venue for your next game
+              Temukan lapangan ideal untuk pertandinganmu berikutnya
             </p>
           </div>
 
           {/* Search and Filters */}
           <div className="mb-8">
             <div className="flex flex-col lg:flex-row gap-4 mb-6">
-              {/* Search */}
               <div className="flex-1 relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                 <Input
-                  placeholder="Search by location, venue name..."
+                  placeholder="Cari lokasi, nama lapangan..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="pl-10"
                 />
               </div>
 
-              {/* Sport Type Filter */}
+              {/* Jenis Olahraga */}
               <Select value={sportType} onValueChange={setSportType}>
                 <SelectTrigger className="w-full lg:w-48">
-                  <SelectValue placeholder="All Sports" />
+                  <SelectValue placeholder="Semua Olahraga" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="all">All Sports</SelectItem>
+                  <SelectItem value="all">Semua Olahraga</SelectItem>
                   {sportTypes.map((sport) => (
                     <SelectItem key={sport} value={sport.toLowerCase()}>
                       {sport}
@@ -122,22 +122,22 @@ const BrowseFields = () => {
                 </SelectContent>
               </Select>
 
-              {/* Sort */}
+              {/* Urutkan */}
               <Select value={sortBy} onValueChange={setSortBy}>
                 <SelectTrigger className="w-full lg:w-48">
-                  <SelectValue placeholder="Sort by" />
+                  <SelectValue placeholder="Urutkan" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="recommended">Recommended</SelectItem>
-                  <SelectItem value="price-low">Price: Low to High</SelectItem>
-                  <SelectItem value="price-high">Price: High to Low</SelectItem>
-                  <SelectItem value="rating">Highest Rated</SelectItem>
-                  <SelectItem value="newest">Newest</SelectItem>
+                  <SelectItem value="recommended">Rekomendasi</SelectItem>
+                  <SelectItem value="price-low">Harga: Termurah</SelectItem>
+                  <SelectItem value="price-high">Harga: Termahal</SelectItem>
+                  <SelectItem value="rating">Rating Tertinggi</SelectItem>
+                  <SelectItem value="newest">Terbaru</SelectItem>
                 </SelectContent>
               </Select>
             </div>
 
-            {/* Active Filters */}
+            {/* Filter Aktif */}
             <div className="flex flex-wrap gap-2">
               {sportType && (
                 <Badge variant="secondary" className="capitalize">
@@ -150,9 +150,9 @@ const BrowseFields = () => {
                   </button>
                 </Badge>
               )}
-              {priceRange[0] > 0 || priceRange[1] < 200 ? (
+              {(priceRange[0] > 0 || priceRange[1] < 200) && (
                 <Badge variant="secondary">
-                  ${priceRange[0]} - ${priceRange[1]}
+                  Rp{priceRange[0]} - Rp{priceRange[1]}
                   <button
                     onClick={() => setPriceRange([0, 200])}
                     className="ml-2 hover:text-destructive"
@@ -160,25 +160,25 @@ const BrowseFields = () => {
                     ×
                   </button>
                 </Badge>
-              ) : null}
+              )}
             </div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-            {/* Sidebar Filters */}
+            {/* Sidebar */}
             <div className="lg:col-span-1">
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center">
                     <SlidersHorizontal className="mr-2 h-4 w-4" />
-                    Filters
+                    Filter
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-6">
-                  {/* Price Range */}
+                  {/* Harga */}
                   <div>
                     <label className="text-sm font-medium mb-4 block">
-                      Price Range (per hour)
+                      Rentang Harga (per jam)
                     </label>
                     <Slider
                       value={priceRange}
@@ -188,22 +188,19 @@ const BrowseFields = () => {
                       className="mb-4"
                     />
                     <div className="flex justify-between text-sm text-muted-foreground">
-                      <span>${priceRange[0]}</span>
-                      <span>${priceRange[1]}</span>
+                      <span>Rp{priceRange[0]}</span>
+                      <span>Rp{priceRange[1]}</span>
                     </div>
                   </div>
 
-                  {/* Features */}
+                  {/* Fasilitas */}
                   <div>
                     <label className="text-sm font-medium mb-4 block">
-                      Features
+                      Fasilitas
                     </label>
                     <div className="space-y-3">
                       {features.map((feature) => (
-                        <div
-                          key={feature}
-                          className="flex items-center space-x-2"
-                        >
+                        <div key={feature} className="flex items-center space-x-2">
                           <Checkbox id={feature} />
                           <label htmlFor={feature} className="text-sm">
                             {feature}
@@ -213,28 +210,28 @@ const BrowseFields = () => {
                     </div>
                   </div>
 
-                  {/* Availability */}
+                  {/* Ketersediaan */}
                   <div>
                     <label className="text-sm font-medium mb-4 block">
-                      Availability
+                      Ketersediaan
                     </label>
                     <div className="space-y-3">
                       <div className="flex items-center space-x-2">
                         <Checkbox id="available-now" />
                         <label htmlFor="available-now" className="text-sm">
-                          Available Now
+                          Tersedia Sekarang
                         </label>
                       </div>
                       <div className="flex items-center space-x-2">
                         <Checkbox id="available-today" />
                         <label htmlFor="available-today" className="text-sm">
-                          Available Today
+                          Tersedia Hari Ini
                         </label>
                       </div>
                       <div className="flex items-center space-x-2">
                         <Checkbox id="available-weekend" />
                         <label htmlFor="available-weekend" className="text-sm">
-                          Available This Weekend
+                          Tersedia Akhir Pekan
                         </label>
                       </div>
                     </div>
@@ -243,17 +240,17 @@ const BrowseFields = () => {
               </Card>
             </div>
 
-            {/* Results */}
+            {/* Hasil Pencarian */}
             <div className="lg:col-span-3">
               <div className="flex items-center justify-between mb-6">
                 <p className="text-muted-foreground">
                   {loading
-                    ? "Loading..."
-                    : `Showing ${allFields.length} results`}
+                    ? "Memuat..."
+                    : `Menampilkan ${allFields.length} hasil`}
                 </p>
                 <Button variant="outline" size="sm" className="lg:hidden">
                   <Filter className="mr-2 h-4 w-4" />
-                  Filters
+                  Filter
                 </Button>
               </div>
 
@@ -261,7 +258,7 @@ const BrowseFields = () => {
                 <div className="flex items-center justify-center py-12">
                   <div className="flex items-center space-x-2">
                     <Loader2 className="h-6 w-6 animate-spin" />
-                    <span>Loading fields...</span>
+                    <span>Memuat lapangan...</span>
                   </div>
                 </div>
               ) : error ? (
@@ -269,14 +266,14 @@ const BrowseFields = () => {
                   <div className="text-center">
                     <p className="text-muted-foreground mb-4">{error}</p>
                     <Button onClick={() => window.location.reload()}>
-                      Try Again
+                      Coba Lagi
                     </Button>
                   </div>
                 </div>
               ) : allFields.length === 0 ? (
                 <div className="flex items-center justify-center py-12">
                   <div className="text-center">
-                    <p className="text-muted-foreground">No fields found.</p>
+                    <p className="text-muted-foreground">Lapangan tidak ditemukan.</p>
                   </div>
                 </div>
               ) : (
@@ -287,11 +284,11 @@ const BrowseFields = () => {
                 </div>
               )}
 
-              {/* Load More */}
+              {/* Tombol Load More */}
               {!loading && !error && allFields.length > 0 && (
                 <div className="text-center mt-12">
                   <Button variant="outline" size="lg">
-                    Load More Fields
+                    Tampilkan Lebih Banyak
                   </Button>
                 </div>
               )}
@@ -306,3 +303,4 @@ const BrowseFields = () => {
 };
 
 export default BrowseFields;
+

@@ -8,26 +8,26 @@ const About = () => {
   const values = [
     {
       icon: Users,
-      title: "Community First",
+      title: "Komunitas di Utama",
       description:
-        "We believe sports bring people together and build stronger communities.",
+        "Kami percaya olahraga menyatukan orang dan membangun komunitas yang lebih kuat.",
     },
     {
       icon: MapPin,
-      title: "Local Focus",
+      title: "Fokus Lokal",
       description:
-        "Supporting local sports facilities and making them accessible to everyone.",
+        "Mendukung fasilitas olahraga lokal agar dapat diakses oleh semua kalangan.",
     },
     {
       icon: Trophy,
-      title: "Excellence",
+      title: "Keunggulan",
       description:
-        "We strive for the highest quality in both our platform and partner facilities.",
+        "Kami berusaha memberikan kualitas terbaik pada platform dan fasilitas mitra kami.",
     },
     {
       icon: Heart,
-      title: "Passion for Sports",
-      description: "Our love for sports drives everything we do.",
+      title: "Semangat Olahraga",
+      description: "Kecintaan kami pada olahraga adalah alasan kami terus berkembang.",
     },
   ];
 
@@ -40,41 +40,30 @@ const About = () => {
           {/* Hero Section */}
           <div className="text-center mb-16">
             <Badge className="mb-4 bg-sport-50 text-sport-700 hover:bg-sport-100">
-              About FieldBook
+              Tentang ArenaKita
             </Badge>
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-              Making Sports Accessible
-              <span className="block gradient-text">For Everyone</span>
+              Olahraga Mudah Diakses
+              <span className="block gradient-text">Untuk Semua Orang</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              FieldBook was founded with a simple mission: to make it easier for
-              people to find, book, and play sports. We connect athletes with
-              premium facilities while supporting local sports communities.
+              ArenaKita hadir dengan satu misi sederhana: memudahkan siapa saja dalam mencari, memesan, dan bermain olahraga. Kami menghubungkan atlet dengan fasilitas premium sambil mendukung komunitas olahraga lokal.
             </p>
           </div>
 
           {/* Story Section */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
             <div>
-              <h2 className="text-3xl font-bold mb-6">Our Story</h2>
+              <h2 className="text-3xl font-bold mb-6">Kisah Kami</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  FieldBook started when our founders struggled to find
-                  available basketball courts for their weekly games. After
-                  calling dozens of facilities and dealing with outdated booking
-                  systems, they realized there had to be a better way.
+                  ArenaKita berawal dari pengalaman para pendirinya yang kesulitan mencari lapangan basket untuk bermain rutin setiap minggu. Setelah menelepon puluhan tempat dan menghadapi sistem pemesanan yang rumit, kami yakin harus ada cara yang lebih baik.
                 </p>
                 <p>
-                  Today, we've partnered with hundreds of sports facilities
-                  across the country, making it simple for anyone to discover
-                  and book their perfect playing venue. From casual pickup games
-                  to competitive tournaments, FieldBook serves athletes of all
-                  levels.
+                  Kini, kami telah bermitra dengan ratusan fasilitas olahraga di seluruh Indonesia. Siapa pun bisa menemukan dan memesan lapangan terbaik dengan mudah — mulai dari pertandingan santai hingga turnamen kompetitif.
                 </p>
                 <p>
-                  We're more than just a booking platform - we're building a
-                  community where sports bring people together, support local
-                  businesses, and promote healthy, active lifestyles.
+                  ArenaKita bukan sekadar platform booking. Kami membangun komunitas yang menyatukan orang lewat olahraga, mendukung usaha lokal, dan mendorong gaya hidup aktif dan sehat.
                 </p>
               </div>
             </div>
@@ -83,15 +72,15 @@ const About = () => {
                 <div className="text-4xl font-bold text-sport-600 mb-2">
                   2019
                 </div>
-                <div className="text-muted-foreground">Founded</div>
+                <div className="text-muted-foreground">Tahun Berdiri</div>
                 <div className="mt-6 text-2xl font-bold text-sport-600 mb-2">
                   500+
                 </div>
-                <div className="text-muted-foreground">Partner Facilities</div>
+                <div className="text-muted-foreground">Mitra Fasilitas</div>
                 <div className="mt-6 text-2xl font-bold text-sport-600 mb-2">
-                  10K+
+                  10.000+
                 </div>
-                <div className="text-muted-foreground">Happy Athletes</div>
+                <div className="text-muted-foreground">Pengguna Bahagia</div>
               </div>
             </div>
           </div>
@@ -100,11 +89,10 @@ const About = () => {
           <div className="mb-20">
             <div className="text-center mb-12">
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-                Our Values
+                Nilai-Nilai Kami
               </h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                These principles guide everything we do and help us stay focused
-                on what matters most.
+                Prinsip ini menjadi panduan dalam segala hal yang kami lakukan dan membantu kami tetap fokus pada hal yang terpenting.
               </p>
             </div>
 
@@ -136,19 +124,17 @@ const About = () => {
           {/* Team Section */}
           <div className="text-center">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Join Our Team
+              Bergabung Bersama Kami
             </h2>
             <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-              We're always looking for passionate people who love sports and
-              want to make a difference. Check out our open positions and help
-              us build the future of sports booking.
+              Kami selalu mencari orang-orang hebat yang mencintai olahraga dan ingin membuat perubahan. Lihat posisi yang tersedia dan bantu kami membangun masa depan booking olahraga.
             </p>
             <div className="inline-flex gap-4">
               <button className="px-6 py-3 gradient-bg text-white rounded-lg hover:opacity-90 transition-opacity">
-                View Open Positions
+                Lihat Lowongan
               </button>
               <button className="px-6 py-3 border border-sport-200 text-sport-600 rounded-lg hover:bg-sport-50 transition-colors">
-                Learn More
+                Pelajari Lebih Lanjut
               </button>
             </div>
           </div>
