@@ -5,23 +5,23 @@ const HowItWorks = () => {
   const steps = [
     {
       icon: Search,
-      title: "Find Your Field",
+      title: "Cari Lapanganmu",
       description:
-        "Search for sports facilities by location, sport type, and availability. Browse hundreds of verified venues.",
+        "Cari lapangan olahraga favoritmu, lokasi terdekat, dan pilihan harga yang cocok.",
       step: "01",
     },
     {
       icon: Calendar,
-      title: "Book Instantly",
+      title: "Book Secara Instan",
       description:
-        "Select your preferred time slot and book instantly. Secure payment and instant confirmation guaranteed.",
+        "Pilih waktu bookingmu, pembayaran aman, dan dijamin konfirmasi pembayaran secara instan.",
       step: "02",
     },
     {
       icon: PlayCircle,
-      title: "Play & Enjoy",
+      title: "Play & Chill",
       description:
-        "Show up and play! All fields come with essential equipment and facilities. Focus on your game.",
+        "Nikmati olahragamu secara nyaman, tanpa gangguan maintenance apapun itu.",
       step: "03",
     },
   ];

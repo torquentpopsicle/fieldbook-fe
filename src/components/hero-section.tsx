@@ -113,7 +113,7 @@ const HeroSection = () => {
             </div>
 
             <div className="text-sm text-muted-foreground text-center">
-              Over{" "}
+              Lebih{" "}
               <span className="font-semibold text-sport-600">500+ Lapangan</span>{" "}
               tersedia di jangkauan areamu
             </div>
