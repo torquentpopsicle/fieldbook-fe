@@ -10,30 +10,30 @@ import { Shield, Clock, Star, Users, MapPin, Trophy } from "lucide-react";
 
 const Index = () => {
   const stats = [
-    { label: "Active Users", value: "10K+", icon: Users },
-    { label: "Sports Facilities", value: "500+", icon: MapPin },
-    { label: "Cities Covered", value: "25+", icon: Trophy },
-    { label: "Bookings/Month", value: "5K+", icon: Clock },
+    { label: "Pengguna Aktif", value: "10K+", icon: Users },
+    { label: "Lapangan Terdaftar", value: "500+", icon: MapPin },
+    { label: "Kota Tersedia", value: "25+", icon: Trophy },
+    { label: "Booking/Bulan", value: "5K+", icon: Clock },
   ];
 
   const benefits = [
     {
       icon: Shield,
-      title: "Verified Venues",
+      title: "Lapangan Terverifikasi",
       description:
-        "All our sports facilities are verified and maintained to the highest standards for your safety and enjoyment.",
+        "Semua lapangan telah dicek dan dipelihara sesuai standar tinggi untuk kenyamanan dan keamanan kamu.",
     },
     {
       icon: Clock,
-      title: "24/7 Booking",
+      title: "Booking 24 Jam",
       description:
-        "Book your favorite sports field anytime, anywhere. Our platform is available round the clock for your convenience.",
+        "Pesan kapan saja, di mana saja. ArenaKita siap sedia 24 jam penuh untuk kemudahan kamu.",
     },
     {
       icon: Star,
-      title: "Best Prices",
+      title: "Harga Terbaik",
       description:
-        "Get competitive rates and exclusive deals on premium sports facilities. Quality doesn't have to be expensive.",
+        "Dapatkan promo eksklusif dan tarif bersaing untuk fasilitas olahraga terbaik. Murah tapi tetap berkualitas!",
     },
   ];
 
@@ -83,10 +83,10 @@ const Index = () => {
                 Kenapa ArenaKita?
               </Badge>
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-                Platform Terbaik yang menyediakan banyak pilihan lapangan dengan harga yang terjangkau, praktis anti ribet dengan garansi 100% uang kembali jika booking gagal.
+                Platform terbaik untuk booking lapangan olahraga dengan mudah, cepat, dan harga terjangkau!
               </h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Pembayaran aman, anti delay
+                Semua proses aman, instan, dan anti ribet.
               </p>
             </div>
 
@@ -122,24 +122,24 @@ const Index = () => {
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Ready to Play?
+                Siap Bermain?
               </h2>
               <p className="text-xl text-white/90 mb-8">
-                Yuk, langsung booking lapangan favoritmu, sudah banyak atlet terkenal yang mempercayai ArenaKita.
+                Yuk, langsung booking lapangan favoritmu sekarang. Banyak atlet & komunitas sudah percaya ArenaKita!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
                   size="lg"
                   className="bg-white text-sport-600 hover:bg-white/90"
                 >
-                  Start Booking Sekarang
+                  Booking Sekarang
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-white text-sport-600 hover:bg-white/90 hover:text-sport-600"
+                  className="border-white text-white hover:bg-white/90 hover:text-sport-600"
                 >
-                  Baca Selengkapnya
+                  Pelajari Lebih Lanjut
                 </Button>
               </div>
             </div>
