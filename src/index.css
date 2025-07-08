@@ -3,11 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  /**
-   * Tailwind CSS theme
-   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
-   * A different format will require also updating the theme in tailwind.config.ts.
-  */
   :root {
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
@@ -18,7 +13,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
 
-    --primary: 159 84% 39%;
+    --primary: 217 91% 60%; /* BIRU (Tailwind blue-500) */
     --primary-foreground: 0 0% 100%;
 
     --secondary: 240 4.8% 95.9%;
@@ -35,33 +30,24 @@
 
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
-    --ring: 159 84% 39%;
+    --ring: 217 91% 60%; /* Sama dengan primary */
 
     --radius: 0.75rem;
 
-    /* Sports-themed brand colors - Green palette */
-    --sport-50: 138 100% 96%;
-    --sport-100: 141 84% 93%;
-    --sport-200: 141 79% 85%;
-    --sport-300: 142 77% 73%;
-    --sport-400: 142 69% 58%;
-    --sport-500: 159 84% 39%;
-    --sport-600: 158 64% 52%;
-    --sport-700: 158 64% 42%;
-    --sport-800: 159 61% 35%;
-    --sport-900: 159 61% 29%;
+    /* Biru-themed brand colors (ganti sport-* jadi spektrum biru) */
+    --sport-50: 210 100% 97%;
+    --sport-100: 210 100% 95%;
+    --sport-200: 210 94% 86%;
+    --sport-300: 213 94% 74%;
+    --sport-400: 217 91% 60%;
+    --sport-500: 221 83% 53%;
+    --sport-600: 224 76% 48%;
+    --sport-700: 226 71% 40%;
+    --sport-800: 228 66% 32%;
+    --sport-900: 230 60% 24%;
 
-    /* Orange accent colors */
-    --orange-50: 33 100% 96%;
-    --orange-100: 34 100% 92%;
-    --orange-200: 32 98% 83%;
-    --orange-300: 31 97% 72%;
-    --orange-400: 27 96% 61%;
-    --orange-500: 25 95% 53%;
-    --orange-600: 21 90% 48%;
-    --orange-700: 17 88% 40%;
-    --orange-800: 15 79% 34%;
-    --orange-900: 15 75% 28%;
+    /* Optional: ubah orange juga agar match */
+    --orange-500: 220 100% 50%;
   }
 
   .dark {
@@ -74,7 +60,7 @@
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 159 84% 39%;
+    --primary: 217 91% 60%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 240 3.7% 15.9%;
@@ -91,12 +77,12 @@
 
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
-    --ring: 159 84% 39%;
+    --ring: 217 91% 60%;
 
-    /* Dark mode adjustments for brand colors */
-    --sport-500: 159 84% 45%;
-    --sport-600: 158 64% 58%;
-    --orange-500: 25 95% 58%;
+    /* Dark mode untuk biru */
+    --sport-500: 221 83% 58%;
+    --sport-600: 224 76% 52%;
+    --orange-500: 220 100% 58%;
   }
 }
 
