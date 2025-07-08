@@ -80,15 +80,13 @@ const Index = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <Badge className="mb-4 bg-sport-50 text-sport-700 hover:bg-sport-100">
-                Why Choose FieldBook
+                Kenapa ArenaKita?
               </Badge>
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-                The Smart Way to Book Sports Facilities
+                Platform Terbaik yang menyediakan banyak pilihan lapangan dengan harga yang terjangkau, praktis anti ribet dengan garansi 100% uang kembali jika booking gagal.
               </h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Experience the future of sports facility booking with our
-                innovative platform designed for athletes and sports
-                enthusiasts.
+                Pembayaran aman, anti delay
               </p>
             </div>
 
@@ -127,23 +125,21 @@ const Index = () => {
                 Ready to Play?
               </h2>
               <p className="text-xl text-white/90 mb-8">
-                Join thousands of athletes who trust FieldBook for their sports
-                facility needs. Book your next game today and experience the
-                difference.
+                Yuk, langsung booking lapangan favoritmu, sudah banyak atlet terkenal yang mempercayai ArenaKita.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
                   size="lg"
                   className="bg-white text-sport-600 hover:bg-white/90"
                 >
-                  Start Booking Now
+                  Start Booking Sekarang
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
                   className="border-white text-sport-600 hover:bg-white/90 hover:text-sport-600"
                 >
-                  Learn More
+                  Baca Selengkapnya
                 </Button>
               </div>
             </div>
