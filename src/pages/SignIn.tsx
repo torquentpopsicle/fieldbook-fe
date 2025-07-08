@@ -104,7 +104,7 @@ const SignIn = () => {
                   <label className="text-sm font-medium">Email</label>
                   <Input
                     type="email"
-                    placeholder="Enter your email"
+                    placeholder="Masukkan email kamu"
                     value={formData.email}
                     onChange={(e) =>
                       setFormData({ ...formData, email: e.target.value })
@@ -117,7 +117,7 @@ const SignIn = () => {
                   <div className="relative">
                     <Input
                       type={showPassword ? "text" : "password"}
-                      placeholder="Enter your password"
+                      placeholder="Masukkan password kamu"
                       value={formData.password}
                       onChange={(e) =>
                         setFormData({ ...formData, password: e.target.value })
@@ -183,7 +183,7 @@ const SignIn = () => {
                   <label className="text-sm font-medium">Email</label>
                   <Input
                     type="email"
-                    placeholder="Enter admin email"
+                    placeholder="Masukkan email kamu"
                     value={formData.email}
                     onChange={(e) =>
                       setFormData({ ...formData, email: e.target.value })
@@ -196,7 +196,7 @@ const SignIn = () => {
                   <div className="relative">
                     <Input
                       type={showPassword ? "text" : "password"}
-                      placeholder="Enter admin password"
+                      placeholder="Masukkan password kamu"
                       value={formData.password}
                       onChange={(e) =>
                         setFormData({ ...formData, password: e.target.value })

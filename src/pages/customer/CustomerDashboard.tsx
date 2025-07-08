@@ -25,33 +25,33 @@ const CustomerDashboard = () => {
   const upcomingBookings = [
     {
       id: "1",
-      field: "Elite Soccer Complex",
+      field: "Kompleks Sepak Bola Elite",
       date: "2024-01-15",
       time: "14:00 - 16:00",
       status: "confirmed",
-      location: "Downtown Sports Center",
+      location: "Pusat Olahraga Kota",
       price: 75,
       image:
         "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=400&h=300&fit=crop",
     },
     {
       id: "2",
-      field: "Basketball Court A",
+      field: "Lapangan Basket A",
       date: "2024-01-18",
       time: "18:00 - 20:00",
       status: "confirmed",
-      location: "City Sports Hub",
+      location: "Sport Hub Barat",
       price: 45,
       image:
         "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=400&h=300&fit=crop",
     },
     {
       id: "3",
-      field: "Tennis Court 1",
+      field: "Lapangan Tenis 1",
       date: "2024-01-20",
       time: "09:00 - 10:30",
       status: "pending",
-      location: "Riverside Tennis Center",
+      location: "Tennis Center Riverside",
       price: 60,
       image:
         "https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?w=400&h=300&fit=crop",
@@ -61,8 +61,8 @@ const CustomerDashboard = () => {
   const recommendedFields = [
     {
       id: 1,
-      name: "Premium Futsal Arena",
-      address: "North Sports Complex",
+      name: "Arena Futsal Premium",
+      address: "Kompleks Olahraga Utara",
       images:
         "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=400&h=300&fit=crop",
       price_per_hour: 65000,
@@ -70,55 +70,55 @@ const CustomerDashboard = () => {
       reviews_count: 89,
       capacity: 12,
       sport_type: "Futsal",
-      availability_summary: "Available today",
+      availability_summary: "Tersedia hari ini",
       facilities: [
         "Indoor",
-        "Professional Surface",
-        "Sound System",
-        "Lighting",
+        "Lapangan Profesional",
+        "Sistem Suara",
+        "Pencahayaan",
       ],
       currency: "Rp",
     },
     {
       id: 2,
-      name: "Volleyball Pro Court",
-      address: "Westside Recreation",
+      name: "Lapangan Voli Pro",
+      address: "Rekreasi Barat",
       images:
         "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
       price_per_hour: 55000,
       rating: 4.6,
       reviews_count: 156,
       capacity: 12,
-      sport_type: "Volleyball",
-      availability_summary: "Available tomorrow",
-      facilities: ["Indoor", "Professional Net", "Parking", "Cafe"],
+      sport_type: "Voli",
+      availability_summary: "Tersedia besok",
+      facilities: ["Indoor", "Net Profesional", "Parkir", "Kafe"],
       currency: "Rp",
     },
   ];
 
   const stats = [
     {
-      title: "Total Bookings",
+      title: "Total Booking",
       value: "12",
-      change: "+3 this month",
+      change: "+3 bulan ini",
       icon: Calendar,
     },
     {
-      title: "Hours Played",
+      title: "Total Jam Main",
       value: "28",
-      change: "+6 this month",
+      change: "+6 bulan ini",
       icon: Clock,
     },
     {
-      title: "Favorite Fields",
+      title: "Lapangan Favorit",
       value: "5",
-      change: "+2 recently",
+      change: "+2 baru-baru ini",
       icon: Star,
     },
     {
-      title: "Total Spent",
-      value: "$840",
-      change: "+$180 this month",
+      title: "Total Pengeluaran",
+      value: "Rp840.000",
+      change: "+Rp180.000 bulan ini",
       icon: TrendingUp,
     },
   ];
@@ -142,7 +142,7 @@ const CustomerDashboard = () => {
           <div>
             <h2 className="text-3xl font-bold tracking-tight">Selamat Datang!</h2>
             <p className="text-muted-foreground">
-              Ready untuk booking lagi?
+              Siap untuk booking lagi?
             </p>
           </div>
           <Button className="gradient-bg hover:opacity-90">
@@ -177,9 +177,9 @@ const CustomerDashboard = () => {
           <Card className="lg:col-span-2">
             <CardHeader className="flex flex-row items-center justify-between">
               <div>
-                <CardTitle>Booking Yang Akan Datang</CardTitle>
+                <CardTitle>Booking Mendatang</CardTitle>
                 <CardDescription>
-                  Jadwal-jadwal reservasi lapangan olahragamu
+                  Jadwal pemesanan lapangan olahragamu
                 </CardDescription>
               </div>
               <Button variant="outline" size="sm">
@@ -204,7 +204,7 @@ const CustomerDashboard = () => {
                         <Badge
                           className={`${getStatusColor(booking.status)} ml-3`}
                         >
-                          {booking.status}
+                          {booking.status === "confirmed" ? "Terkonfirmasi" : booking.status === "pending" ? "Menunggu" : booking.status}
                         </Badge>
                       </div>
                       <div className="flex items-center space-x-4 text-sm text-muted-foreground">
@@ -222,7 +222,7 @@ const CustomerDashboard = () => {
                         </div>
                       </div>
                       <div className="text-sm font-medium text-sport-600">
-                        ${booking.price}
+                        Rp{booking.price}.000
                       </div>
                     </div>
                     <Button variant="outline" size="sm">
@@ -247,7 +247,7 @@ const CustomerDashboard = () => {
               </Button>
               <Button className="w-full justify-start" variant="outline">
                 <Calendar className="mr-2 h-4 w-4" />
-                Reschedule Booking
+                Ubah Jadwal Booking
               </Button>
               <Button className="w-full justify-start" variant="outline">
                 <Star className="mr-2 h-4 w-4" />
@@ -255,7 +255,7 @@ const CustomerDashboard = () => {
               </Button>
               <Button className="w-full justify-start" variant="outline">
                 <Users className="mr-2 h-4 w-4" />
-                Invite Teman Kamu
+                Undang Teman
               </Button>
             </CardContent>
           </Card>
@@ -265,14 +265,14 @@ const CustomerDashboard = () => {
         <Card>
           <CardHeader className="flex flex-row items-center justify-between">
             <div>
-              <CardTitle>Rekommen Buat Kamu Banget Nih!</CardTitle>
+              <CardTitle>Rekomendasi Buat Kamu</CardTitle>
               <CardDescription>
-                Berdasarkan Histori Pemesanan Kamu
+                Berdasarkan histori pemesanan kamu
               </CardDescription>
             </div>
             <Button variant="outline" size="sm">
               <Search className="mr-2 h-4 w-4" />
-              Browse Semua
+              Jelajahi Semua
             </Button>
           </CardHeader>
           <CardContent>
@@ -287,9 +287,9 @@ const CustomerDashboard = () => {
         {/* Recent Activity */}
         <Card>
           <CardHeader>
-            <CardTitle>Aktivitas Terbaru Kamu</CardTitle>
+            <CardTitle>Aktivitas Terbaru</CardTitle>
             <CardDescription>
-              Bookings Terakhir Yang Kamu Lakukan
+              Riwayat terakhir booking dan aktivitas kamu
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -298,23 +298,23 @@ const CustomerDashboard = () => {
                 <div className="w-2 h-2 bg-sport-500 rounded-full"></div>
                 <div className="flex-1">
                   <p className="text-sm">
-                    Booked Elite Soccer Complex untuk 20 Mei
+                    Booking Kompleks Sepak Bola Elite untuk 20 Mei
                   </p>
-                  <p className="text-xs text-muted-foreground">2 jam yang lalu</p>
+                  <p className="text-xs text-muted-foreground">2 jam lalu</p>
                 </div>
               </div>
               <div className="flex items-center space-x-4">
                 <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                 <div className="flex-1">
-                  <p className="text-sm">Menilai Basketball Court A - 5 bintang</p>
-                  <p className="text-xs text-muted-foreground">1 hari yang lalu</p>
+                  <p className="text-sm">Memberi rating Lapangan Basket A - 5 bintang</p>
+                  <p className="text-xs text-muted-foreground">1 hari lalu</p>
                 </div>
               </div>
               <div className="flex items-center space-x-4">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                 <div className="flex-1">
-                  <p className="text-sm">Menambahkan Lapangan Tennis Pemuda 1 menit yang lalu</p>
-                  <p className="text-xs text-muted-foreground">3 hari yang lalu</p>
+                  <p className="text-sm">Menambahkan Lapangan Tenis Pemuda</p>
+                  <p className="text-xs text-muted-foreground">3 hari lalu</p>
                 </div>
               </div>
             </div>
