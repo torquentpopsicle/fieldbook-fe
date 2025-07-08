@@ -30,10 +30,9 @@ const HowItWorks = () => {
     <section className="py-16 lg:py-24 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4">How It Works</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold mb-4">Tips Booking Anti Ribet</h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Book your perfect sports field in just three simple steps. It's that
-            easy!
+            Tinggal satset, booking cepat dan termurah!
           </p>
         </div>
 

@@ -40,16 +40,15 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in-up">
-            Book Your Perfect
-            <span className="block">Sports Field</span>
+            Satu Lapangan
+            <span className="block">Seribu Kemenangan</span>
           </h1>
 
           <p
             className="text-xl text-white/90 mb-12 max-w-2xl mx-auto animate-fade-in-up"
             style={{ animationDelay: "0.1s" }}
           >
-            Find and reserve premium sports facilities in your area. From soccer
-            fields to basketball courts, book instantly and play today.
+            Booking lapangan olahraga favoritmu, anti delay, booking secara instan, dan available untuk digunakan di hari yang sama!
           </p>
 
           {/* Search Form */}
@@ -115,8 +114,8 @@ const HeroSection = () => {
 
             <div className="text-sm text-muted-foreground text-center">
               Over{" "}
-              <span className="font-semibold text-sport-600">500+ fields</span>{" "}
-              available in your area
+              <span className="font-semibold text-sport-600">500+ Lapangan</span>{" "}
+              tersedia di jangkauan areamu
             </div>
           </div>
         </div>

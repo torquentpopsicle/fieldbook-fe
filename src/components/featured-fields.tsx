@@ -82,10 +82,10 @@ const FeaturedFields = () => {
         <div className="flex items-center justify-between mb-12">
           <div>
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Featured Fields
+              Pilihan Lapangan
             </h2>
             <p className="text-muted-foreground text-lg">
-              Discover the most popular sports facilities in your area
+              Temukan lapangan premium di sekitarmu
             </p>
           </div>
           <Button variant="outline" className="hidden md:flex items-center">
