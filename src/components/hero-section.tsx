@@ -61,7 +61,7 @@ const HeroSection = () => {
               <div className="relative">
                 <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                 <Input
-                  placeholder="Enter location..."
+                  placeholder="Masukkan Lokasimu..."
                   value={location}
                   onChange={(e) => setLocation(e.target.value)}
                   className="pl-10 h-12"
@@ -71,7 +71,7 @@ const HeroSection = () => {
               {/* Sport Type */}
               <Select value={sportType} onValueChange={setSportType}>
                 <SelectTrigger className="h-12">
-                  <SelectValue placeholder="Sport type" />
+                  <SelectValue placeholder="Tipe Olahragamu" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">All Sports</SelectItem>
@@ -92,7 +92,7 @@ const HeroSection = () => {
                     className="h-12 justify-start text-left font-normal"
                   >
                     <CalendarIcon className="mr-2 h-4 w-4" />
-                    {date ? format(date, "PPP") : "Select date"}
+                    {date ? format(date, "PPP") : "Pilih Tanggal Booking"}
                   </Button>
                 </PopoverTrigger>
                 <PopoverContent className="w-auto p-0" align="start">
@@ -108,7 +108,7 @@ const HeroSection = () => {
               {/* Search Button */}
               <Button className="h-12 gradient-bg hover:opacity-90">
                 <Search className="mr-2 h-4 w-4" />
-                Search Fields
+                Cari Lapangan
               </Button>
             </div>
 
