@@ -139,7 +139,7 @@ const Index = () => {
                   variant="outline"
                   className="border-white text-white hover:bg-white/90 hover:text-sport-600"
                 >
-                  Pelajari Lebih Lanjut
+                  Learn More
                 </Button>
               </div>
             </div>
