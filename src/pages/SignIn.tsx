@@ -73,9 +73,9 @@ const SignIn = () => {
             <div className="h-10 w-10 rounded-xl gradient-bg flex items-center justify-center">
               <MapPin className="h-6 w-6 text-white" />
             </div>
-            <span className="font-bold text-2xl gradient-text">FieldBook</span>
+            <span className="font-bold text-2xl gradient-text">ArenaKita</span>
           </Link>
-          <p className="mt-2 text-muted-foreground">Sign in to your account</p>
+          <p className="mt-2 text-muted-foreground">Masukkan Email dan Password kamu</p>
         </div>
 
         <Tabs defaultValue="customer" className="w-full">

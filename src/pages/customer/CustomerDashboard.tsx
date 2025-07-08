@@ -140,14 +140,14 @@ const CustomerDashboard = () => {
         {/* Welcome Header */}
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-3xl font-bold tracking-tight">Welcome back!</h2>
+            <h2 className="text-3xl font-bold tracking-tight">Selamat Datang!</h2>
             <p className="text-muted-foreground">
-              Ready for your next game? Let's find you the perfect field.
+              Ready untuk booking lagi?
             </p>
           </div>
           <Button className="gradient-bg hover:opacity-90">
             <Plus className="mr-2 h-4 w-4" />
-            Book New Field
+            Booking Baru
           </Button>
         </div>
 
@@ -177,13 +177,13 @@ const CustomerDashboard = () => {
           <Card className="lg:col-span-2">
             <CardHeader className="flex flex-row items-center justify-between">
               <div>
-                <CardTitle>Upcoming Bookings</CardTitle>
+                <CardTitle>Booking Yang Akan Datang</CardTitle>
                 <CardDescription>
-                  Your scheduled field reservations
+                  Jadwal-jadwal reservasi lapangan olahragamu
                 </CardDescription>
               </div>
               <Button variant="outline" size="sm">
-                View All
+                Lihat Semua
               </Button>
             </CardHeader>
             <CardContent>
@@ -226,7 +226,7 @@ const CustomerDashboard = () => {
                       </div>
                     </div>
                     <Button variant="outline" size="sm">
-                      Manage
+                      Kelola
                     </Button>
                   </div>
                 ))}
@@ -237,13 +237,13 @@ const CustomerDashboard = () => {
           {/* Quick Actions */}
           <Card>
             <CardHeader>
-              <CardTitle>Quick Actions</CardTitle>
-              <CardDescription>Common tasks and shortcuts</CardDescription>
+              <CardTitle>Shortcut Cepat</CardTitle>
+              <CardDescription>Klik di sini, anti ribet</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <Button className="w-full justify-start" variant="outline">
                 <Search className="mr-2 h-4 w-4" />
-                Find Available Fields
+                Cari Lapangan Tersedia
               </Button>
               <Button className="w-full justify-start" variant="outline">
                 <Calendar className="mr-2 h-4 w-4" />
@@ -251,11 +251,11 @@ const CustomerDashboard = () => {
               </Button>
               <Button className="w-full justify-start" variant="outline">
                 <Star className="mr-2 h-4 w-4" />
-                Rate Recent Experience
+                Berikan Ratingmu
               </Button>
               <Button className="w-full justify-start" variant="outline">
                 <Users className="mr-2 h-4 w-4" />
-                Invite Friends
+                Invite Teman Kamu
               </Button>
             </CardContent>
           </Card>
@@ -265,14 +265,14 @@ const CustomerDashboard = () => {
         <Card>
           <CardHeader className="flex flex-row items-center justify-between">
             <div>
-              <CardTitle>Recommended for You</CardTitle>
+              <CardTitle>Rekommen Buat Kamu Banget Nih!</CardTitle>
               <CardDescription>
-                Fields based on your preferences and history
+                Berdasarkan Histori Pemesanan Kamu
               </CardDescription>
             </div>
             <Button variant="outline" size="sm">
               <Search className="mr-2 h-4 w-4" />
-              Browse All
+              Browse Semua
             </Button>
           </CardHeader>
           <CardContent>
@@ -287,9 +287,9 @@ const CustomerDashboard = () => {
         {/* Recent Activity */}
         <Card>
           <CardHeader>
-            <CardTitle>Recent Activity</CardTitle>
+            <CardTitle>Aktivitas Terbaru Kamu</CardTitle>
             <CardDescription>
-              Your latest bookings and interactions
+              Bookings Terakhir Yang Kamu Lakukan
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -298,23 +298,23 @@ const CustomerDashboard = () => {
                 <div className="w-2 h-2 bg-sport-500 rounded-full"></div>
                 <div className="flex-1">
                   <p className="text-sm">
-                    Booked Elite Soccer Complex for January 15th
+                    Booked Elite Soccer Complex untuk 20 Mei
                   </p>
-                  <p className="text-xs text-muted-foreground">2 hours ago</p>
+                  <p className="text-xs text-muted-foreground">2 jam yang lalu</p>
                 </div>
               </div>
               <div className="flex items-center space-x-4">
                 <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                 <div className="flex-1">
-                  <p className="text-sm">Rated Basketball Court A - 5 stars</p>
-                  <p className="text-xs text-muted-foreground">1 day ago</p>
+                  <p className="text-sm">Menilai Basketball Court A - 5 bintang</p>
+                  <p className="text-xs text-muted-foreground">1 hari yang lalu</p>
                 </div>
               </div>
               <div className="flex items-center space-x-4">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                 <div className="flex-1">
-                  <p className="text-sm">Added Tennis Court 1 to favorites</p>
-                  <p className="text-xs text-muted-foreground">3 days ago</p>
+                  <p className="text-sm">Menambahkan Lapangan Tennis Pemuda 1 menit yang lalu</p>
+                  <p className="text-xs text-muted-foreground">3 hari yang lalu</p>
                 </div>
               </div>
             </div>

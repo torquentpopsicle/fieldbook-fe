@@ -141,9 +141,9 @@ const AdminDashboard = () => {
       <div className="space-y-6">
         {/* Welcome Header */}
         <div>
-          <h2 className="text-3xl font-bold tracking-tight">Dashboard</h2>
+          <h2 className="text-3xl font-bold tracking-tight">Admin Dashboard</h2>
           <p className="text-muted-foreground">
-            Welcome back! Here's what's happening with your sports facilities.
+            Selamat Datang! Kelola sistem kamu disini
           </p>
         </div>
 
@@ -177,9 +177,9 @@ const AdminDashboard = () => {
           {/* Recent Bookings */}
           <Card className="lg:col-span-2">
             <CardHeader>
-              <CardTitle>Recent Bookings</CardTitle>
+              <CardTitle>Booking Terbaru</CardTitle>
               <CardDescription>
-                Latest field reservations and their status
+                Daftar Booking Terbaru dan Status Pembayaran
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -214,7 +214,7 @@ const AdminDashboard = () => {
                 ))}
               </div>
               <div className="mt-4 text-center">
-                <Button variant="outline">View All Bookings</Button>
+                <Button variant="outline">Lihat Semua Booking</Button>
               </div>
             </CardContent>
           </Card>
@@ -222,9 +222,9 @@ const AdminDashboard = () => {
           {/* Alerts & Notifications */}
           <Card>
             <CardHeader>
-              <CardTitle>Alerts & Notifications</CardTitle>
+              <CardTitle>Notifikasi Penting!</CardTitle>
               <CardDescription>
-                Important updates and system notifications
+                Update & Notifikasi Penting!
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -246,7 +246,7 @@ const AdminDashboard = () => {
               </div>
               <div className="mt-4 text-center">
                 <Button variant="outline" size="sm">
-                  View All Alerts
+                  Lihat Semua Notifikasi
                 </Button>
               </div>
             </CardContent>
@@ -256,28 +256,28 @@ const AdminDashboard = () => {
         {/* Quick Actions */}
         <Card>
           <CardHeader>
-            <CardTitle>Quick Actions</CardTitle>
+            <CardTitle>Shortcut Cepat</CardTitle>
             <CardDescription>
-              Common tasks and shortcuts for field management
+              Kelola Manajemen Sistem Kamu Di sini
             </CardDescription>
           </CardHeader>
           <CardContent>
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
               <Button className="h-20 flex-col space-y-2" variant="outline">
                 <Building2 className="h-6 w-6" />
-                <span>Add New Field</span>
+                <span>Add Lapangan Terbaru</span>
               </Button>
               <Button className="h-20 flex-col space-y-2" variant="outline">
                 <Calendar className="h-6 w-6" />
-                <span>View Schedule</span>
+                <span>Lihat Jadwal</span>
               </Button>
               <Button className="h-20 flex-col space-y-2" variant="outline">
                 <Users className="h-6 w-6" />
-                <span>Manage Customers</span>
+                <span>Kelola Customer</span>
               </Button>
               <Button className="h-20 flex-col space-y-2" variant="outline">
                 <DollarSign className="h-6 w-6" />
-                <span>Financial Reports</span>
+                <span>Laporan Keuangan</span>
               </Button>
             </div>
           </CardContent>
