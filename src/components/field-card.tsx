@@ -44,7 +44,7 @@ const FieldCard = ({
           className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
         />
         <Badge className="absolute top-3 left-3 bg-sport-500 hover:bg-sport-600">
-          {sport_type || "Sport"}
+          {sport_type || "Olahraga"}
         </Badge>
         <div className="absolute top-3 right-3 bg-black/50 backdrop-blur-sm rounded-full px-2 py-1 flex items-center space-x-1">
           <Star className="h-3 w-3 fill-yellow-400 text-yellow-400" />
@@ -57,17 +57,17 @@ const FieldCard = ({
 
         <div className="flex items-center text-muted-foreground text-sm mb-2">
           <MapPin className="h-4 w-4 mr-1" />
-          {address || "Location not specified"}
+          {address || "Lokasi tidak tersedia"}
         </div>
 
         <div className="flex items-center justify-between text-sm text-muted-foreground mb-3">
           <div className="flex items-center">
             <Users className="h-4 w-4 mr-1" />
-            Up to {capacity || 0} players
+            Maks. {capacity || 0} pemain
           </div>
           <div className="flex items-center">
             <Clock className="h-4 w-4 mr-1" />
-            {availability_summary || "Check availability"}
+            {availability_summary || "Cek ketersediaan"}
           </div>
         </div>
 
@@ -80,7 +80,7 @@ const FieldCard = ({
             ))}
             {facilities.length > 3 && (
               <Badge variant="secondary" className="text-xs">
-                +{facilities.length - 3} more
+                +{facilities.length - 3} lainnya
               </Badge>
             )}
           </div>
@@ -94,17 +94,17 @@ const FieldCard = ({
                 ? `${Number(price_per_hour).toLocaleString("id-ID").replace(/,/g, ".")}`
                 : "0"}
             </span>
-            <span className="text-sm text-muted-foreground">/hour</span>
+            <span className="text-sm text-muted-foreground">/jam</span>
           </div>
           <div className="text-xs text-muted-foreground">
-            {reviews_count || 0} reviews
+            {reviews_count || 0} ulasan
           </div>
         </div>
       </CardContent>
 
       <CardFooter className="p-4 pt-0">
         <Button className="w-full gradient-bg hover:opacity-90">
-          Book Now
+          Booking Sekarang
         </Button>
       </CardFooter>
     </Card>
